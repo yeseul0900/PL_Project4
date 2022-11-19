@@ -8,6 +8,7 @@
 		int id = Integer.parseInt(sid);
 		SuggestionVO u = new SuggestionVO();
 		String filename = SuggestionDAO.getPhotoFilename(id);
+		u.setPersonID(id);
 		if(filename != null)
 			FileUpload.deleteFile(request,filename);
 		SuggestionDAO boardDAO = new SuggestionDAO();

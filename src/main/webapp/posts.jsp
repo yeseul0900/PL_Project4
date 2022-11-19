@@ -8,7 +8,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-    <title>free board</title>
+    <title>건의사항 페이지</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -166,7 +166,12 @@
                             <td>${u.getCategory()}</td>
                             <td>${u.getSuggestions()}</td>
                             <td>${u.getRegdate()}</td>
-                            <td>${u.getphoto()}</td>
+                            <td>
+                                <c:if test="${u.getphoto() ne''}">
+                                    <img src="${pageContext.request.contextPath}/upload/${vo.getphoto()}" width="50px">
+                                </c:if>
+
+                            </td>
                             <td>
                                 <a href="editform.jsp?id=${u.getPersonID()}">Edit</a>
                                 <a href="javascript:delete_ok('${u.getPersonID()}')">Delete</a>

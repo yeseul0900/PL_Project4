@@ -15,14 +15,14 @@ import java.util.List;
 
 public class SuggestionDAO {
 	
-	Connection conn = null;
-	PreparedStatement stmt = null;
-	ResultSet rs = null;
+	static Connection conn = null;
+	static PreparedStatement stmt = null;
+	static ResultSet rs = null;
 
 	private final String BOARD_INSERT = "insert into Suggestion (Name, Nickname, S_number, major, department, category, suggestions, photo) values (?,?,?,?,?,?,?,?)";
 	private final String BOARD_UPDATE = "update Suggestion set Name = ?, Nickname = ?, S_number = ?, major = ?, department = ?, category = ?, suggestions = ?, photo = ? where PersonID = ?";
 	private final String BOARD_DELETE = "delete from Suggestion  where PersonID=?";
-	private final String BOARD_GET = "select * from Suggestion  where PersonID=?";
+	private static final String BOARD_GET = "select * from Suggestion  where PersonID=?";
 	private final String BOARD_LIST = "select * from Suggestion order by PersonID desc";
 
 	public int insertBoard(SuggestionVO vo) {

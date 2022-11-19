@@ -1,13 +1,15 @@
 package com.example.SuggestionDAO;
 
 import com.example.SuggestionVO.SuggestionVO;
+import com.example.common.FileUpload;
 import com.example.util.JDBCUtil;
+import com.oreilly.servlet.MultipartRequest;
+import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 
-
-import java.sql.Connection;
-import java.sql.Date;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
+import java.io.File;
+import javax.servlet.http.HttpServletRequest;
+import java.io.IOException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -135,4 +137,23 @@ public class SuggestionDAO {
 		} 
 		return list;
 	}
+	public static String getPhotoFilename(int personID) {
+		String filename = null;
+		try{
+			conn = JDBCUtil.getConnection();
+			stmt = conn.prepareStatement(BOARD_GET);
+			stmt.setInt(1,personID);
+			rs = stmt.executeQuery();
+			if(rs.next()){
+				filename = rs.getString("photo");
+			}
+			rs.close();
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+		System.out.println("JDBC 기능처리");
+		return filename;
+	}
 }
+
+

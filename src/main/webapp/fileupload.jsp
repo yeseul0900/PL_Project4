@@ -14,7 +14,7 @@
   String filename = "";
   int sizeLimit = 15 *1024*1024;
 
-  String realPath = request.getServletContext().getRealPath("upload");
+  String realPath = request.getServletContext().getRealPath("./upload");
   File dir = new File(realPath);
   if(!dir.exists()) dir.mkdirs();
 

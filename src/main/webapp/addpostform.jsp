@@ -70,7 +70,7 @@
     </style>
 </head>
 <body>
-<form name = "add" class = "sign" action="addpost.jsp"  method="post" >
+<form name = "add" class = "sign" action="addpost.jsp"  method="post" enctype="multipart/form-data" >
     <div>
         <h1>건의사항 추가</h1>
         <button type="button" class="modal_btn" onclick="location.href = './posts.jsp'">닫기</button>

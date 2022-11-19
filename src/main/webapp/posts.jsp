@@ -146,6 +146,7 @@
                         <th>건의 카테고리</th>
                         <th>건의사항</th>
                         <th>등록일자</th>
+                        <th>사진</th>
                         <th>수정/삭제</th>
                     </tr>
                     </thead>
@@ -165,6 +166,7 @@
                             <td>${u.getCategory()}</td>
                             <td>${u.getSuggestions()}</td>
                             <td>${u.getRegdate()}</td>
+                            <td>${u.getphoto()}</td>
                             <td>
                                 <a href="editform.jsp?id=${u.getPersonID()}">Edit</a>
                                 <a href="javascript:delete_ok('${u.getPersonID()}')">Delete</a>

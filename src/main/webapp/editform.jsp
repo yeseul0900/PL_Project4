@@ -79,7 +79,7 @@
 	SuggestionVO u=boardDAO.getBoard(Integer.parseInt(id));
 %>
 
-<form action="editpost.jsp" class = "sign" method="post">
+<form action="editpost.jsp" class = "sign" method="post" enctype="multipart/form-data">
 <input type="hidden" name="personID" value="<%=u.getPersonID() %>"/>
 	<div>
 		<h1>건의사항 수정</h1>

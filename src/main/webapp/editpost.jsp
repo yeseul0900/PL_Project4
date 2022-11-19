@@ -9,6 +9,9 @@
 
 <%
 	SuggestionDAO boardDAO = new SuggestionDAO();
+	FileUpload upload = new FileUpload();
+	SuggestionVO u = upload.uploadphoto(request);
 	int i=boardDAO.updateBoard(u);
 	response.sendRedirect("posts.jsp");
+
 %>

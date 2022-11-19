@@ -167,7 +167,7 @@
                             <td>${u.getSuggestions()}</td>
                             <td>${u.getRegdate()}</td>
                             <td>
-                                <c:if test="${u.getphoto() ne''}">
+                                <c:if test="${u.getphoto() ne''}"><br />
                                     <img src="${pageContext.request.contextPath}/upload/${vo.getphoto()}" width="50px">
                                 </c:if>
 

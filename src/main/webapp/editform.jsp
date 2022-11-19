@@ -118,6 +118,9 @@
 		<legend>파일첨부</legend>
 		<label for ="photo">파일선택: </label>
 		<input type="file" id ="photo" name = "photo" value = "<%=u.getphoto()%>"><br>
+		<c:if test="${u.getphoto() ne''}"><br />
+			<img src="${pageContext.request.contextPath}/upload/${vo.getphoto()}" width="50px">
+		</c:if>
 	</fieldset>
 	<div >
 		<input type="submit" class="submit" value="Submit">

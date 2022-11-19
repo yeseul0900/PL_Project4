@@ -173,8 +173,8 @@
 
                             </td>
                             <td>
-                                <a href="editform.jsp?id=${u.getPersonID()}">Edit</a>
-                                <a href="javascript:delete_ok('${u.getPersonID()}')">Delete</a>
+                                <a href="editform.jsp?id=${u.getPersonID()}">수정</a>
+                                <a href="javascript:delete_ok('${u.getPersonID()}')">삭제</a>
                             </td>
                         </tr>
                     </c:forEach>

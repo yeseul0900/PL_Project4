@@ -61,7 +61,7 @@
         }
         .modal_btn{
 
-            width : 10% !important;
+            width : 25% !important;
         }
         .submit:hover{
             background-color: white;

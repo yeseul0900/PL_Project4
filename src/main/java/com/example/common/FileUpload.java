@@ -14,7 +14,7 @@ public class FileUpload{
         String filename = "";
         int sizeLimit = 15 *1024*1024;
 
-        String realPath = request.getServletContext().getRealPath("upload");
+        String realPath = request.getServletContext().getRealPath("./upload");
         File dir = new File(realPath);
         if(!dir.exists()) dir.mkdirs();
 
@@ -49,7 +49,7 @@ public class FileUpload{
         return one;
     }
     public static void deleteFile(HttpServletRequest request, String filename){
-        String filePath = request.getServletContext().getRealPath("upload");
+        String filePath = request.getServletContext().getRealPath("./upload");
         File f = new File(filePath + "/" + filename);
         if( f.exists()) f.delete();
     }
